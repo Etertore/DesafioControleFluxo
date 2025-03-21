@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Contador {
     public static void main(String[] args) {
 
-        Scanner terminal = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o primeiro parâmetro: ");
-        int parametroUm = terminal.nextInt();
+        int parametroUm = scanner.nextInt();
         System.out.println("Digite o segundo parâmetro: ");
-        int parametroDois = terminal.nextInt();
+        int parametroDois = scanner.nextInt();
 
         try {
             contar(parametroUm, parametroDois);
-            terminal.close();
+            scanner.close();
 
         } catch (ParametrosInvalidosException e) {
             System.out.println("O segundo parâmetro deve ser maior que o primeiro");
@@ -25,7 +25,7 @@ public class Contador {
 
         } else {
             for (int indice = parametroUm; indice < parametroDois; indice++) {
-                System.out.println("imprimindo o numero: " + (indice + 1));
+                System.out.println("Imprimindo o numero: " + (indice + 1));
             }
 
         }
